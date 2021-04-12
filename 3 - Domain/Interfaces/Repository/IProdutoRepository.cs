@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Domain.Interfaces.Repository
 {
-    public interface IProdutoRepository     // Cria um "Contrato" entre o ProdutoService e DB_Produto
+    public interface IProdutoRepository     
     {
         void LimparBase();
         void GerarBase(List<Produto> produtos);

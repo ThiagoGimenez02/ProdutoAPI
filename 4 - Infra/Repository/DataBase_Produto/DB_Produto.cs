@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace ProdutoAPI.Repository.DataBase_Produto
 {
-    public class DB_Produto : DbContext, IProdutoRepository         // pega o contexto a ser usado
+    public class DB_Produto : DbContext, IProdutoRepository       
     {
 
         public DB_Produto(DbContextOptions<DB_Produto> options) : base(options)
@@ -19,7 +19,7 @@ namespace ProdutoAPI.Repository.DataBase_Produto
 
         public void GerarBase(List<Produto> Lista_produtos)
         {
-            Produtos.AddRange(Lista_produtos);          // salva a lista de modelos recebida pelo IProdutoRepository 
+            Produtos.AddRange(Lista_produtos);          // salva a lista de modelos recebida
             SaveChanges();
         }
 

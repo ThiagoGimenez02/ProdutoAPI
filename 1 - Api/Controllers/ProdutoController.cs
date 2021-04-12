@@ -17,13 +17,13 @@ namespace ProdutoAPI.Controllers
 
         public ProdutoController(IProdutoService produtoService)
         {
-            _produtoService = produtoService; // pega o contexto a ser usado
+            _produtoService = produtoService; 
         }
 
         [HttpGet]
         public ActionResult<List<Produto>> GetTodosRegistros()
         {
-            List<Produto> produtos = _produtoService.GetProdutos(); // faz uma requisição da lista de produtos para o IProdutoService
+            List<Produto> produtos = _produtoService.GetProdutos(); // Faz uma requisição da lista de produtos
             return Ok(produtos);
         }
 
@@ -31,14 +31,14 @@ namespace ProdutoAPI.Controllers
         [Route("GerarRelatorio")]
         public ActionResult<List<ProdutoResumo>> GerarRelatorio()
         {
-            List<ProdutoResumo> produtos = _produtoService.GetProdutoResumos(); // faz uma requisição da lista de produtos
-            return Ok(produtos);                                                // agrupados pelo nome para o IProdutoService
+            List<ProdutoResumo> produtos = _produtoService.GetProdutoResumos(); // Faz uma requisição da lista de produtos
+            return Ok(produtos);                                                // agrupados pelo nome
         }
 
         [HttpPost]
         [Route("GerarBase")]
         public IActionResult GerarBase(int quantidade)  // Envia uma quantidade de produtos a serem criados
-        {                                               // pelo o IProdutoService
+        {                                               
             _produtoService.GerarBase(quantidade);
             return Ok();
         }
@@ -47,7 +47,7 @@ namespace ProdutoAPI.Controllers
         [Route("LimparBase")]
         public IActionResult LimparBase()
         {
-            _produtoService.LimparBase();               // Envia uma requisição de limpar o banco pelo o IProdutoService
+            _produtoService.LimparBase();               // Envia uma requisição de limpar o banco 
             return NoContent();                         
         }
     }

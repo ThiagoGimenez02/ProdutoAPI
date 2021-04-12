@@ -11,7 +11,7 @@ namespace Application
         private readonly IProdutoRepository _produtoRepository;
         public ProdutoService(IProdutoRepository produtoRepository)
         {
-            _produtoRepository = produtoRepository; // pega o contexto a ser usado
+            _produtoRepository = produtoRepository; 
         }
 
         public void GerarBase(int qtdProdutos)
@@ -36,22 +36,22 @@ namespace Application
                 });
             }
 
-            _produtoRepository.GerarBase(listaProdutos);   // Envia uma lista de modelos para o IProdutoRepository
+            _produtoRepository.GerarBase(listaProdutos);   // Envia uma lista de modelos
         }                                                 
 
         public List<ProdutoResumo> GetProdutoResumos()
         {                                   
             return _produtoRepository.GetProdutoResumos(); // faz uma requisição da lista de produtos
-        }                                                  // agrupados pelo nome para o IProdutoRepository
+        }                                                  // agrupados pelo nome
 
         public List<Produto> GetProdutos()
         {
             return _produtoRepository.GetProdutos();    // faz uma requisição da lista de produtos
-        }                                               // para o IProdutoRepository
+        }                                               
 
         public void LimparBase()
         {
-            _produtoRepository.LimparBase();       // Envia uma requisição de limpar o banco pelo o IProdutoRepository 
+            _produtoRepository.LimparBase();       // Envia uma requisição de limpar o banco 
         }                                           
     } 
 }

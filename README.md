@@ -10,7 +10,7 @@ Instruções para executar a api:
 
 Instalar o MySql e o deixar disponível na porta 3306 com usuário root e sem senha.
 
-Clonar o repositório e no console utilizar o seguinte comandos:
+Clonar o repositório e no Packge Manager Console utilizar o seguinte comando:
 
 update-database
 

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProdutoAPI.Repository.DataBase_Produto;
 
-namespace ProdutoAPI.Repository.Migrations
+namespace ProdutoAPI.Migrations
 {
     [DbContext(typeof(DB_Produto))]
     partial class DB_ProdutoModelSnapshot : ModelSnapshot
@@ -16,24 +16,22 @@ namespace ProdutoAPI.Repository.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
 
-            modelBuilder.Entity("ApiProduto.Models.Produto", b =>
+            modelBuilder.Entity("Domain.Models.Produto", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("nome")
-                        .HasMaxLength(5)
+                    b.Property<string>("Nome")
                         .HasColumnType("char(5) CHARACTER SET utf8mb4");
 
-                    b.Property<int>("qtd")
+                    b.Property<int>("QTD")
                         .HasColumnType("int");
 
-                    b.Property<double>("valunit")
-                        .HasPrecision(3, 2)
+                    b.Property<double>("VALUNIT")
                         .HasColumnType("double");
 
-                    b.HasKey("id");
+                    b.HasKey("ID");
 
                     b.ToTable("Produtos");
                 });

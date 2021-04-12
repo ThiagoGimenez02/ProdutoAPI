@@ -1,10 +1,10 @@
 # ProdutoAPI
 
 Necessário possuir instalado:
-Visual Studio V16.8.2 ou superior
-.NetCore V5.0.1 ou superior
-MySql WorkBench V8.0 ou superior
-Xampp V3.2.4 ou superior
+Visual Studio V16.8.2 ou superior,
+.NetCore V5.0.1 ou superior,
+MySql WorkBench V8.0 ou superior,
+Xampp V3.2.4 ou superior.
 
 Instruções para executar a api:
 
